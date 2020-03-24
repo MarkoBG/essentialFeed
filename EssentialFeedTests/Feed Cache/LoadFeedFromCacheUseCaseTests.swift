@@ -89,6 +89,16 @@ class LoadFeedFromCacheUseCaseTests: XCTestCase {
         
     }
     
+    func test_load_doesNotDeleteCacheOnEmptyCache() {
+        let (sut, store) = makeSUT()
+        
+        sut.load { _ in }
+        store.completeRetrievalWitchEmptyCache()
+        
+        XCTAssertEqual(store.receivedMessages, [.retrieve])
+        
+    }
+    
     // MARK: - Helper
     
     private func makeSUT(currentDate: @escaping () -> Date = Date.init, file: StaticString = #file, line: UInt = #line) -> (sut: LocalFeedLoader, store: FeedStoreSpy) {
