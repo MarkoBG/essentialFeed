@@ -51,7 +51,7 @@ class ValidateFeedCacheUseCaseTests: XCTestCase {
     
     // MARK: - Helper
     
-    private func makeSUT(currentDate: @escaping () -> Date = Date.init, file: StaticString = #file, line: UInt = #line) -> (sut: LocalFeedLoader, store: FeedStoreSpy) {
+    func makeSUT(currentDate: @escaping () -> Date = Date.init, file: StaticString = #file, line: UInt = #line) -> (sut: LocalFeedLoader, store: FeedStoreSpy) {
         let store = FeedStoreSpy()
         let sut = LocalFeedLoader(store: store, currentDate: currentDate)
         
@@ -59,34 +59,5 @@ class ValidateFeedCacheUseCaseTests: XCTestCase {
         trackForMemoryLeak(sut, file: file, line: line)
         
         return (sut, store)
-    }
-    
-    private func anyNSError() -> NSError {
-        return NSError(domain: "Any error", code: 0)
-    }
-    
-    private func uniqueItem() -> FeedItem {
-        return FeedItem(id: UUID(), description: "any", location: "any", imageURL: anyURL())
-    }
-    
-    private func uniqueItems() -> (models: [FeedItem], local: [LocalFeedItem]) {
-        let items = [uniqueItem(), uniqueItem()]
-        let localItems = items.map { LocalFeedItem(id: $0.id, description: $0.description, location: $0.location, imageURL: $0.imageURL) }
-        return (items, localItems)
-    }
-    
-    private func anyURL() -> URL {
-        return URL(string: "http://any-url.com")!
-    }
-}
-
-private extension Date {
-    
-    func adding(days: Int) -> Date {
-        return Calendar(identifier: .gregorian).date(byAdding: .day, value: days, to: self)!
-    }
-    
-    func adding(seconds: TimeInterval) -> Date {
-        return self + seconds
     }
 }
