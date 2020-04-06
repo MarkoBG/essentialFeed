@@ -122,8 +122,8 @@ class CacheFeedUseCaseTests: XCTestCase {
         
         var receivedError: Error?
         
-        sut.save([uniqueItem()]) { error in
-            receivedError = error
+        sut.save([uniqueItem()]) { result in
+            if case let Result.failure(error) = result { receivedError = error }
             exp.fulfill()
         }
     
