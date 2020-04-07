@@ -35,6 +35,7 @@
 		EF547988243BA3C80038B68F /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF870820240DAAC7007E3967 /* XCTestCase+MemoryLeakTracking.swift */; };
 		EF547989243BA8330038B68F /* FeedCacheTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF547923242BE6910038B68F /* FeedCacheTestHelpers.swift */; };
 		EF54798A243BA92C0038B68F /* SharedTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF547925242BE7CA0038B68F /* SharedTestHelpers.swift */; };
+		EF547999243CDDE30038B68F /* EssentialFeedIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF547990243CDDE30038B68F /* EssentialFeedIOS.framework */; };
 		EF87081E240C55F6007E3967 /* URLSessionHTTPClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF87081D240C55F6007E3967 /* URLSessionHTTPClientTests.swift */; };
 		EF870823240DBFCB007E3967 /* URLSessionHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF870822240DBFCB007E3967 /* URLSessionHTTPClient.swift */; };
 		EF87082B240EE978007E3967 /* EssentialFeedAPIEndToEndTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF87082A240EE978007E3967 /* EssentialFeedAPIEndToEndTests.swift */; };
@@ -64,6 +65,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = EF1A9643233F8EE40027E527;
 			remoteInfo = EssentialFeed;
+		};
+		EF54799A243CDDE30038B68F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EF1A963B233F8EE40027E527 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EF54798F243CDDE30038B68F;
+			remoteInfo = EssentialFeedIOS;
 		};
 		EF87082E240EE978007E3967 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -104,6 +112,10 @@
 		EF547980243BA1520038B68F /* ManagedFeedImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagedFeedImage.swift; sourceTree = "<group>"; };
 		EF547981243BA1520038B68F /* CoreDataFeedStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataFeedStore.swift; sourceTree = "<group>"; };
 		EF547982243BA1520038B68F /* CoreDataHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataHelpers.swift; sourceTree = "<group>"; };
+		EF547990243CDDE30038B68F /* EssentialFeedIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EssentialFeedIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF547993243CDDE30038B68F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF547998243CDDE30038B68F /* EssentialFeedIOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EssentialFeedIOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF54799F243CDDE30038B68F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF87081D240C55F6007E3967 /* URLSessionHTTPClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClientTests.swift; sourceTree = "<group>"; };
 		EF870820240DAAC7007E3967 /* XCTestCase+MemoryLeakTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+MemoryLeakTracking.swift"; sourceTree = "<group>"; };
 		EF870822240DBFCB007E3967 /* URLSessionHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClient.swift; sourceTree = "<group>"; };
@@ -143,6 +155,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EF54798D243CDDE30038B68F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF547995243CDDE30038B68F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF547999243CDDE30038B68F /* EssentialFeedIOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EF870825240EE978007E3967 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -161,6 +188,8 @@
 				EF1A9651233F8EE50027E527 /* EssentialFeedTests */,
 				EF870829240EE978007E3967 /* EssentialFeedAPIEndToEndTests */,
 				EF547970243B9CAE0038B68F /* EssentialFeedCacheIntegrationTests */,
+				EF547991243CDDE30038B68F /* EssentialFeedIOS */,
+				EF54799C243CDDE30038B68F /* EssentialFeedIOSTests */,
 				EF1A9645233F8EE40027E527 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -172,6 +201,8 @@
 				EF1A964D233F8EE50027E527 /* EssentialFeedTests.xctest */,
 				EF870828240EE978007E3967 /* EssentialFeedAPIEndToEndTests.xctest */,
 				EF54796F243B9CAE0038B68F /* EssentialFeedCacheIntegrationTests.xctest */,
+				EF547990243CDDE30038B68F /* EssentialFeedIOS.framework */,
+				EF547998243CDDE30038B68F /* EssentialFeedIOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -271,6 +302,22 @@
 			path = CoreData;
 			sourceTree = "<group>";
 		};
+		EF547991243CDDE30038B68F /* EssentialFeedIOS */ = {
+			isa = PBXGroup;
+			children = (
+				EF547993243CDDE30038B68F /* Info.plist */,
+			);
+			path = EssentialFeedIOS;
+			sourceTree = "<group>";
+		};
+		EF54799C243CDDE30038B68F /* EssentialFeedIOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				EF54799F243CDDE30038B68F /* Info.plist */,
+			);
+			path = EssentialFeedIOSTests;
+			sourceTree = "<group>";
+		};
 		EF87081F240DAA76007E3967 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -333,6 +380,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EF54798B243CDDE30038B68F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
@@ -390,6 +444,42 @@
 			productReference = EF54796F243B9CAE0038B68F /* EssentialFeedCacheIntegrationTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		EF54798F243CDDE30038B68F /* EssentialFeedIOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF5479A1243CDDE30038B68F /* Build configuration list for PBXNativeTarget "EssentialFeedIOS" */;
+			buildPhases = (
+				EF54798B243CDDE30038B68F /* Headers */,
+				EF54798C243CDDE30038B68F /* Sources */,
+				EF54798D243CDDE30038B68F /* Frameworks */,
+				EF54798E243CDDE30038B68F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EssentialFeedIOS;
+			productName = EssentialFeedIOS;
+			productReference = EF547990243CDDE30038B68F /* EssentialFeedIOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		EF547997243CDDE30038B68F /* EssentialFeedIOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF5479A4243CDDE30038B68F /* Build configuration list for PBXNativeTarget "EssentialFeedIOSTests" */;
+			buildPhases = (
+				EF547994243CDDE30038B68F /* Sources */,
+				EF547995243CDDE30038B68F /* Frameworks */,
+				EF547996243CDDE30038B68F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EF54799B243CDDE30038B68F /* PBXTargetDependency */,
+			);
+			name = EssentialFeedIOSTests;
+			productName = EssentialFeedIOSTests;
+			productReference = EF547998243CDDE30038B68F /* EssentialFeedIOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		EF870827240EE978007E3967 /* EssentialFeedAPIEndToEndTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = EF870830240EE978007E3967 /* Build configuration list for PBXNativeTarget "EssentialFeedAPIEndToEndTests" */;
@@ -428,6 +518,12 @@
 					EF54796E243B9CAE0038B68F = {
 						CreatedOnToolsVersion = 11.3.1;
 					};
+					EF54798F243CDDE30038B68F = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					EF547997243CDDE30038B68F = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
 					EF870827240EE978007E3967 = {
 						CreatedOnToolsVersion = 11.3.1;
 					};
@@ -450,6 +546,8 @@
 				EF1A964C233F8EE50027E527 /* EssentialFeedTests */,
 				EF870827240EE978007E3967 /* EssentialFeedAPIEndToEndTests */,
 				EF54796E243B9CAE0038B68F /* EssentialFeedCacheIntegrationTests */,
+				EF54798F243CDDE30038B68F /* EssentialFeedIOS */,
+				EF547997243CDDE30038B68F /* EssentialFeedIOSTests */,
 			);
 		};
 /* End PBXProject section */
@@ -470,6 +568,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		EF54796D243B9CAE0038B68F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF54798E243CDDE30038B68F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF547996243CDDE30038B68F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -542,6 +654,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EF54798C243CDDE30038B68F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF547994243CDDE30038B68F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EF870824240EE978007E3967 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -563,6 +689,11 @@
 			isa = PBXTargetDependency;
 			target = EF1A9643233F8EE40027E527 /* EssentialFeed */;
 			targetProxy = EF547975243B9CAE0038B68F /* PBXContainerItemProxy */;
+		};
+		EF54799B243CDDE30038B68F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EF54798F243CDDE30038B68F /* EssentialFeedIOS */;
+			targetProxy = EF54799A243CDDE30038B68F /* PBXContainerItemProxy */;
 		};
 		EF87082F240EE978007E3967 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -826,6 +957,100 @@
 			};
 			name = Release;
 		};
+		EF5479A2243CDDE30038B68F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = G8H6DP9BPD;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = EssentialFeedIOS/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = MT.EssentialFeedIOS;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EF5479A3243CDDE30038B68F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = G8H6DP9BPD;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = EssentialFeedIOS/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = MT.EssentialFeedIOS;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EF5479A5243CDDE30038B68F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G8H6DP9BPD;
+				INFOPLIST_FILE = EssentialFeedIOSTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = MT.EssentialFeedIOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EF5479A6243CDDE30038B68F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G8H6DP9BPD;
+				INFOPLIST_FILE = EssentialFeedIOSTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = MT.EssentialFeedIOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		EF870831240EE978007E3967 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -901,6 +1126,24 @@
 			buildConfigurations = (
 				EF547978243B9CAE0038B68F /* Debug */,
 				EF547979243B9CAE0038B68F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF5479A1243CDDE30038B68F /* Build configuration list for PBXNativeTarget "EssentialFeedIOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF5479A2243CDDE30038B68F /* Debug */,
+				EF5479A3243CDDE30038B68F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF5479A4243CDDE30038B68F /* Build configuration list for PBXNativeTarget "EssentialFeedIOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF5479A5243CDDE30038B68F /* Debug */,
+				EF5479A6243CDDE30038B68F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
